@@ -48,9 +48,9 @@ Next, re-generate a project after selecting your preferred IDE toolchain. As sho
    * [ST BLE Sensor Android](https://play.google.com/store/apps/details?id=com.st.bluems&hl=en_US&gl=US)
 
 ## User's Guide
-* Install the ST BLE Sensor app on a smarphone
-* [Install ST's Bluetooth stack](https://youtu.be/wheGvdXsi4o), found under "STM32WB_Copro_Wireless_Binaries\STM32WB5x"
-* To quickly test the application, unstall the prebuilt hex firmware image, "Binary/BLE_AI_MotionSense.hex"
+* Install the ST BLE Sensor app on a smartphone
+* [Install ST's Bluetooth stack](https://youtu.be/wheGvdXsi4o), found under STM32CubeWB's "STM32WB_Copro_Wireless_Binaries\STM32WB5x"
+* To quickly test the application, uninstall the prebuilt hex firmware image, "Binary/BLE_AI_MotionSense.hex"
 * Or run and debug the firmware on the STM32WB5MM-DK board by building it using the IDE toolchain
 * (OPTIONAL) Connect a serial terminal (Tera Term) to view the log messages.
 
@@ -69,8 +69,8 @@ This project used a pre-trained Keras model (model.h5 file), trained using a sma
 The STM32WB5MM-DK board has a 3D accelerometer & 3D gyroscope sensor ISM330DHCX. This accelerometer will be used for the model's input data.
 ![AI2](Utilities/Media/Images/User_Guide/AI2.jpg)
 
-* 78 accelerometer data are used as the input for this model.
-* 3 output data are generated from this model where one of the highest scored output data will be the predicted motion.
+* ISM330DHCX accelerometer’s x, y and z axis data will be used for the model's input. The input shape of this model is 26x1x3
+* There are 3 outputs generated from this model where one with the highest scored will be the predicted motion.
 
 You can create your own model using your own data captures. If using a different model, make sure to adjust the  sensor settings (data rate, scale, etc) accordingly to match the training dataset.
 
