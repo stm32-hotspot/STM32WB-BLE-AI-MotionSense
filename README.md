@@ -10,8 +10,8 @@ This Hotspot FW package includes:
    * You can create your own model using your own data captures and test your model using this project.
    * Additional ST middlewares: [X-CUBE-AI](https://www.st.com/en/embedded-software/x-cube-ai.html) v7.1.0 and [X-CUBE-MEMS1](https://www.st.com/en/embedded-software/x-cube-mems1.html) v1.9.0
 
-![AI0](Utilities/Media/Images/Users_Guide/AI0.png)
-![AI1](Utilities/Media/Images/Users_Guide/AI1.gif)
+![AI0](Utilities/Media/Images/User_Guide/AI0.png)
+![AI1](Utilities/Media/Images/User_Guide/AI1.gif)
 
 * PC tools requirement
    * [STM32CubeMX](https://www.st.com/en/development-tools/stm32cubemx.html) v6.5.0
@@ -23,16 +23,16 @@ This example uses X-CUBE-AI's Network runtime library and X-CUEB-MEMS1 library.
 To use these libraries, use the STM32CubeMX to generate the libraries and agree to the libraries' license agreement shown below.
 
 **You must go through this step to build this firmware example.**
-![Agree X-CUBE-AI](Utilities/Media/Images/Users_Guide/AI-Lic.gif)
-![Agree X-CUEB-MEMS1](Utilities/Media/Images/Users_Guide/MEMS1-Lic.gif)
+![Agree X-CUBE-AI](Utilities/Media/Images/User_Guide/AI-Lic.gif)
+![Agree X-CUEB-MEMS1](Utilities/Media/Images/User_Guide/MEMS1-Lic.gif)
 
 The next step is to generate these library files via STM32CubeMX. This is required to build this example project.
 
 First, re-select the Keras model file (model.h5) in the Pinout & Configuration tab / X-CUBE-AI's network menu.
-![Model](Utilities/Media/Images/Users_Guide/re-select.png)
+![Model](Utilities/Media/Images/User_Guide/re-select.png)
 
 Next, re-generate a project after selecting your preferred IDE toolchain. As shown in this screenshot, select the IDE and generate the project.
-![RE-generate](Utilities/Media/Images/Users_Guide/re-gen.png)
+![RE-generate](Utilities/Media/Images/User_Guide/re-gen.png)
 
 
 ## Hardware Needed
@@ -54,20 +54,20 @@ Next, re-generate a project after selecting your preferred IDE toolchain. As sho
 * Or run and debug the firmware on the STM32WB5MM-DK board by building it using the IDE toolchain
 * (OPTIONAL) Connect a serial terminal (Tera Term) to view the log messages.
 
-![UG0](Utilities/Media/Images/Users_Guide/UG0.jpg)
+![UG0](Utilities/Media/Images/User_Guide/UG0.jpg)
 
 * [0] Power the STM32WB5MM-DK board by connecting a micro USB cable to CN11 (USB STLK)
 * [1] Launch the ST BLE Sensor app. Click the "Connect to a device" icon to start scanning.
 * [2] You should see a device appear named AI-Motion. Tap the discovered device.
 * [3] You will see the "Activity Recognition" screen. The "Activity detection started" message should show up so that the STM32WB starts sending the motion data to this app.
 
-![UG1](Utilities/Media/Images/Users_Guide/UG1.jpg)
+![UG1](Utilities/Media/Images/User_Guide/UG1.jpg)
 
 ## AI model
 
 This project used a pre-trained Keras model (model.h5 file), trained using a small dataset created specifically for this example.
 The STM32WB5MM-DK board has a 3D accelerometer & 3D gyroscope sensor ISM330DHCX. This accelerometer will be used for the model's input data.
-![AI2](Utilities/Media/Images/Users_Guide/AI2.jpg)
+![AI2](Utilities/Media/Images/User_Guide/AI2.jpg)
 
 * 78 accelerometer data are used as the input for this model.
 * 3 output data are generated from this model where one of the highest scored output data will be the predicted motion.
